@@ -1,0 +1,76 @@
+## 使用方式
+
+請在本機的命令提示字元、PowerShell 或 Terminal 中執行此 Python 程式：
+
+```powershell
+python "google_reviews_auto2.0ver.py"
+```
+
+程式啟動後，會先請使用者輸入想要搜尋的 Google Maps 店家或飯店名稱：
+
+```text
+請輸入店家或飯店名稱：
+```
+
+例如可以輸入：
+
+```text
+台北花園大酒店
+```
+
+接著程式會詢問想要自動滑動評論區幾次：
+
+```text
+請輸入要自動滑動幾次，預設 20 次：
+```
+
+如果直接按 Enter，程式會使用預設值 20 次。
+
+通常每次成功載入時，Google Maps 會回傳約 10 筆左右的評論資料，因此滑動次數越多，可能收集到的評論越多。
+
+輸入完成後，程式會自動開啟一個 Chrome 視窗，並進入 Google Maps 搜尋結果頁面。
+
+接著請使用者在開啟的 Chrome 視窗中手動操作：
+
+```text
+1. 確認目前頁面是正確的店家或飯店
+2. 點選「評論」分頁
+3. 等待評論列表出現
+4. 回到命令提示字元 / PowerShell / Terminal
+5. 按下 Enter
+```
+
+按下 Enter 後，程式會開始自動滑動 Google Maps 的評論區，並擷取瀏覽器載入的評論 response。
+
+程式會將抓到的評論資料整理成表格，最後輸出為 CSV 檔案。
+
+輸出的 CSV 會存放在：
+
+```text
+output/
+```
+
+檔名格式為：
+
+```text
+店名_google_reviews.csv
+```
+
+例如：
+
+```text
+output/台北花園大酒店_google_reviews.csv
+```
+
+---
+
+## 操作流程簡述
+
+1. 在本機命令列執行 `google_reviews_auto2.0ver.py`
+2. 輸入想搜尋的 Google Maps 店家或飯店名稱
+3. 輸入想自動滑動評論區的次數；若直接按 Enter，預設為 20 次
+4. 程式會自動開啟 Chrome 視窗並搜尋該店家
+5. 使用者需在 Chrome 中確認店家是否正確，並手動點進「評論」分頁
+6. 確認評論列表出現後，回到命令列按 Enter
+7. 程式會自動滑動評論區、擷取評論 response，並整理成 CSV
+8. 輸出檔案會存放在 `output/` 資料夾中
