@@ -1,5 +1,6 @@
 # Google Maps Reviews Auto Collector 
 
+2026.5.5 
 這是一個用於課堂練習與資料蒐集測試的 Google Maps 評論半自動收集工具。
 
 本工具使用 Selenium 開啟 Google Maps 頁面，讓使用者手動確認店家並點擊評論分頁，接著由程式自動滑動評論區，擷取瀏覽器載入的 `listugcposts` response，並整理成 CSV 表格。
