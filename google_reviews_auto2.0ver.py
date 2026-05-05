@@ -133,7 +133,7 @@ def make_driver():
 # 解析評論 response
 # =========================
 
-def extract_reviews_from_data(data, store_name=None)::
+def extract_reviews_from_data(data, store_name=None):
     """
     從 Google Maps listugcposts response 裡抽出評論資料。
 
